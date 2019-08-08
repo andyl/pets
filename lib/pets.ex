@@ -49,6 +49,11 @@ defmodule Pets do
     end
   end
 
+  @doc "Return all records in the table."
+  def all(tablekey) do
+    :ets.tab2list(tablekey)
+  end
+ 
   @doc "Check for existence of key in data-store."
   def has_key?(tablekey, datakey) do
     :ets.lookup(tablekey, datakey) != []
