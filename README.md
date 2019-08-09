@@ -1,21 +1,15 @@
 # Pets
 
-**TODO: Add description**
+Wrapper for `PersistentETS`.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `pets` to your list of dependencies in `mix.exs`:
+Pets is designed to be called from a wrapper module.
 
-```elixir
-def deps do
-  [
-    {:pets, "~> 0.1.0"}
-  ]
-end
-```
+To see an example, view the `Purlex` application.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/pets](https://hexdocs.pm/pets).
+## Testing
 
+For unit tests: Purlex can be run using `async: true`.
+
+For integration tests from the Pets wrapper module, run test in synchronous mode.
