@@ -65,7 +65,10 @@ defmodule Pets do
   """
   def insert(sig, tuple) do
     start(sig)
-    :ets.insert(sig.tablekey, tuple)
+    case :ets.insert(sig.tablekey, tuple) do
+      true -> tuple
+      _ -> :error
+    end
   end
 
   @doc """
