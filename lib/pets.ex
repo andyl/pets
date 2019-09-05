@@ -86,6 +86,16 @@ defmodule Pets do
     end
   end
 
+  @doc """
+  Remove an element from the datastore.
+
+  This function removes the key and it's associated record.
+  """
+  def remove(sig, datakey) do
+    start(sig)
+    :ets.delete(sig.tablekey, datakey)
+  end
+
   @doc "Return all records in the table."
   def all(sig) do
     start(sig)
