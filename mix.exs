@@ -18,8 +18,8 @@ defmodule Pets.MixProject do
 
   defp deps do
     [
-      {:persistent_ets, "~> 0.1.0"},
-      {:mix_test_watch, "~> 0.8", only: :dev, runtime: false}
+      {:persistent_ets, "~> 0.2"},
+      {:mix_test_watch, "~> 1.1", only: :dev, runtime: false}
     ]
   end
 end

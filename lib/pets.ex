@@ -87,11 +87,11 @@ defmodule Pets do
   end
 
   @doc """
-  Remove an element from the datastore.
+  Delete an element from the datastore.
 
-  This function removes the key and it's associated record.
+  This function deletes the key and it's associated record.
   """
-  def remove(sig, datakey) do
+  def delete(sig, datakey) do
     start(sig)
     :ets.delete(sig.tablekey, datakey)
   end
